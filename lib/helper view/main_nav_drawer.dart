@@ -1,3 +1,6 @@
+import 'package:bhh_itech_shop_demo/home_screen.dart';
+
+import '../shopping_card_view.dart';
 import 'package:flutter/material.dart';
 
 class MainNavDrawer extends StatelessWidget {
@@ -25,10 +28,31 @@ class MainNavDrawer extends StatelessWidget {
     return ListTile(
       title: Text(title),
       onTap: (() {
-        print("Switching to $title Screen");
-
-        Navigator.pop(context);
+        _navChangeView(context, title);
       }),
     );
+  }
+
+  void _navChangeView(BuildContext context, String title) {
+    print("Switching to $title Screen");
+        Navigator.of(context).pop();
+        switch(title) {
+          case "Home": {
+            print("$title was selected");
+            Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => HomeScreen()));
+            
+          } break;
+          case "Shopping card": {
+            print("$title was selected");
+            Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => ShoppingCardView()));
+          } break;
+          case "User": {
+            print("$title was selected");
+          } break;
+          case "About": {
+            print("$title was selected");
+          }
+        }
+        //Navigator.pop(context);
   }
 }
