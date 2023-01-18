@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../models/product.dart';
+import '../styles/styles.dart';
 
 class ProductWidgetView extends StatelessWidget {
   //final Product displayedProduct;
@@ -9,13 +10,30 @@ class ProductWidgetView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //return ElevatedButton(onPressed: (){fun();}, child: _buttonDesign());
+    return _buttonDesign();
+  }
+
+  Widget _buttonDesign() {
     return Container(
-      width: 300,
-      height: 150,
+      width: 200,
+      height: 200,
       decoration: const BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(10.0)),
+          image: DecorationImage(
+              image: AssetImage('assets/images/testImage.jpg'),
+              fit: BoxFit.cover),
+          borderRadius: BorderRadius.all(Radius.circular(25.0)),
           color: Colors.blueAccent),
-      child: const Center(child: Text("Hello2)")),
+      child: Center(
+        child: Text(
+          "Hi",
+          style: Styles.productWidgetTitleStyle,
+        ),
+      ),
     );
+  }
+
+  void fun() {
+    print("Hi");
   }
 }

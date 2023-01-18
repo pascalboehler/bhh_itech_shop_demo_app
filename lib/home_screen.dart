@@ -15,7 +15,11 @@ class HomeScreen extends StatelessWidget {
           title: const Text("Home"),
           backgroundColor: Colors.greenAccent,
         ),
-        body: Center(child: ProductWidgetView()),
+        body: Padding(
+            padding: EdgeInsets.only(top: 10.0),
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [ProductWidgetView()])),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             //TODO: Do something
