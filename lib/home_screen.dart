@@ -1,0 +1,31 @@
+import 'package:flutter/material.dart';
+import 'helper view/main_nav_drawer.dart';
+import 'models/product.dart';
+
+class HomeScreen extends StatelessWidget {
+  final List<Product> _products;
+
+  HomeScreen(this._products);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text("Home"),
+          backgroundColor: Colors.greenAccent,
+        ),
+        body: const Text("Hi"),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            //TODO: Do something
+            print("Adding item to cart");
+          },
+          backgroundColor: Colors.greenAccent,
+          child: const Icon(
+            Icons.add_shopping_cart,
+            color: Colors.black,
+          ),
+        ),
+        drawer: MainNavDrawer());
+  }
+}
