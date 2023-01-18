@@ -10,8 +10,9 @@ class ProductWidgetView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //return ElevatedButton(onPressed: (){fun();}, child: _buttonDesign());
-    return Padding(padding: EdgeInsets.all(10), child: _buttonDesign());
+    return GestureDetector(onTap: () {
+      showProductDetailView();
+    }, child: Padding(padding: EdgeInsets.all(10), child: _buttonDesign()));
   }
 
   Widget _buttonDesign() {
@@ -33,7 +34,7 @@ class ProductWidgetView extends StatelessWidget {
     );
   }
 
-  void fun() {
+  void showProductDetailView() {
     print("Hi");
   }
 }
