@@ -1,11 +1,12 @@
+import 'helper view/product_widget_view.dart';
 import 'package:flutter/material.dart';
 import 'helper view/main_nav_drawer.dart';
 import 'models/product.dart';
 
 class HomeScreen extends StatelessWidget {
-  final List<Product> _products;
+  //final List<Product> _products;
 
-  HomeScreen(this._products);
+  //HomeScreen(this._products);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,7 @@ class HomeScreen extends StatelessWidget {
           title: const Text("Home"),
           backgroundColor: Colors.greenAccent,
         ),
-        body: const Text("Hi"),
+        body: Center(child: ProductWidgetView()),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             //TODO: Do something

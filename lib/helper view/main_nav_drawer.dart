@@ -35,24 +35,32 @@ class MainNavDrawer extends StatelessWidget {
 
   void _navChangeView(BuildContext context, String title) {
     print("Switching to $title Screen");
-        Navigator.of(context).pop();
-        switch(title) {
-          case "Home": {
-            print("$title was selected");
-            Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => HomeScreen()));
-            
-          } break;
-          case "Shopping card": {
-            print("$title was selected");
-            Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => ShoppingCardView()));
-          } break;
-          case "User": {
-            print("$title was selected");
-          } break;
-          case "About": {
-            print("$title was selected");
-          }
+    Navigator.of(context).pop();
+    switch (title) {
+      case "Home":
+        {
+          print("$title was selected");
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (BuildContext context) => HomeScreen()));
         }
-        //Navigator.pop(context);
+        break;
+      case "Shopping card":
+        {
+          print("$title was selected");
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (BuildContext context) => ShoppingCardView()));
+        }
+        break;
+      case "User":
+        {
+          print("$title was selected");
+        }
+        break;
+      case "About":
+        {
+          print("$title was selected");
+        }
+    }
+    //Navigator.pop(context);
   }
 }

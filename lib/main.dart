@@ -7,5 +7,5 @@ import 'home_screen.dart';
 void main() {
   final List<Product> mockProducts = MockProducts.fetchAll();
 
-  runApp(MaterialApp(home: HomeScreen(mockProducts)));
+  runApp(MaterialApp(home: HomeScreen()));
 }
