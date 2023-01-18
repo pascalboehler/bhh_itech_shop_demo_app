@@ -17,9 +17,20 @@ class HomeScreen extends StatelessWidget {
         ),
         body: Padding(
             padding: EdgeInsets.only(top: 10.0),
-            child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [ProductWidgetView()])),
+            child: GridView(
+              gridDelegate:
+                  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+              children: [
+                ProductWidgetView(),
+                ProductWidgetView(),
+                ProductWidgetView(),
+                ProductWidgetView(),
+                ProductWidgetView(),
+                ProductWidgetView(),
+                ProductWidgetView(),
+                ProductWidgetView(),
+              ],
+            )),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             //TODO: Do something
