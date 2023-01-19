@@ -38,6 +38,8 @@ class ProductWidgetView extends StatelessWidget {
   }
 
   void showProductDetailView(BuildContext context) {
-    Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => ProductDetailScreen(displayedProduct)));
+    Navigator.of(context).push(MaterialPageRoute(
+        builder: (BuildContext context) =>
+            ProductDetailScreen(displayedProduct)));
   }
 }

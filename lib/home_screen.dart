@@ -23,7 +23,6 @@ class HomeScreen extends StatelessWidget {
                 itemBuilder: (BuildContext context, index) {
                   return ProductWidgetView(_product[index]);
                 })),
-        
         drawer: MainNavDrawer());
   }
 }
