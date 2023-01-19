@@ -1,12 +1,11 @@
 import 'helper view/product_widget_view.dart';
 import 'package:flutter/material.dart';
 import 'helper view/main_nav_drawer.dart';
+import 'mocks/mock_products.dart';
 import 'models/product.dart';
 
 class HomeScreen extends StatelessWidget {
-  //final List<Product> _products;
-
-  //HomeScreen(this._products);
+  final List<Product> _product = MockProducts.fetchAll();
 
   @override
   Widget build(BuildContext context) {
@@ -17,31 +16,14 @@ class HomeScreen extends StatelessWidget {
         ),
         body: Padding(
             padding: EdgeInsets.only(top: 10.0),
-            child: GridView(
-              gridDelegate:
-                  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-              children: [
-                ProductWidgetView(),
-                ProductWidgetView(),
-                ProductWidgetView(),
-                ProductWidgetView(),
-                ProductWidgetView(),
-                ProductWidgetView(),
-                ProductWidgetView(),
-                ProductWidgetView(),
-              ],
-            )),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            //TODO: Do something
-            print("Adding item to cart");
-          },
-          backgroundColor: Colors.greenAccent,
-          child: const Icon(
-            Icons.add_shopping_cart,
-            color: Colors.black,
-          ),
-        ),
+            child: GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2),
+                itemCount: _product.length,
+                itemBuilder: (BuildContext context, index) {
+                  return ProductWidgetView(_product[index]);
+                })),
+        
         drawer: MainNavDrawer());
   }
 }
