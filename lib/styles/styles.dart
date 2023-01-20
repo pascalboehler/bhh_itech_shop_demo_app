@@ -15,5 +15,7 @@ class Styles {
 
   static final productDescriptionTitle = TextStyle(fontSize: 18.0);
 
-  static const standardColor = Colors.greenAccent;
+  static const bhhBlue = Color.fromARGB(255, 61, 144, 162);
+
+  static const standardColor = bhhBlue;
 }

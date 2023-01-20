@@ -31,7 +31,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
         backgroundColor: Styles.standardColor,
         child: const Icon(
           Icons.add_shopping_cart,
-          color: Colors.black,
+          color: Colors.white,
         ),
       ),
     );
