@@ -23,11 +23,11 @@ class ProductWidgetView extends StatelessWidget {
     return Container(
       width: 200,
       height: 200,
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/images/testImage.jpg'),
+              image: displayedProduct.imageProv,
               fit: BoxFit.cover),
-          borderRadius: BorderRadius.all(Radius.circular(25.0)),
+          borderRadius: const BorderRadius.all(Radius.circular(25.0)),
           color: Colors.blueAccent),
       /*child: Center(
         child: Text(

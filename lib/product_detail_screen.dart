@@ -58,10 +58,10 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
           left: 10.0, right: 10.0, bottom: 5.0, top: 10.0),
       child: Container(
         height: 250,
-        decoration: const BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(10.0)),
+        decoration: BoxDecoration(
+            borderRadius: const BorderRadius.all(Radius.circular(10.0)),
             image: DecorationImage(
-                image: AssetImage('assets/images/testImage.jpg'),
+                image: widget._product.imageProv,
                 fit: BoxFit.cover)),
       ),
     );
