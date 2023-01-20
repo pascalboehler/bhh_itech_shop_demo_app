@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
           backgroundColor: Styles.standardColor,
         ),
         body: Padding(
-            padding: EdgeInsets.only(top: 10.0),
+            padding: const EdgeInsets.only(top: 10.0),
             child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2),

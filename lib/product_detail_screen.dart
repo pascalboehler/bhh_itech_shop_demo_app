@@ -26,7 +26,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
       body: _detailViewBody(context),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          print("Adding item to cart");
+          _addProductToShoppingListWithAmount();
         },
         backgroundColor: Styles.standardColor,
         child: const Icon(
@@ -93,7 +93,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  print("Adding to card");
+                  _addProductToShoppingListWithAmount();
                 },
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Styles.standardColor,
@@ -167,5 +167,9 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
             icon: const Icon(Icons.add_circle_outline))
       ],
     );
+  }
+
+  void _addProductToShoppingListWithAmount() {
+    print("Huiii");
   }
 }

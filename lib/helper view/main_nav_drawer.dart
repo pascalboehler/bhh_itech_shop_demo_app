@@ -12,10 +12,11 @@ class MainNavDrawer extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: [
           const DrawerHeader(
-              decoration: BoxDecoration(
-                color: Styles.standardColor,
-              ),
-              child: Text("ITECH-BHH Merch Shop")),
+            decoration: BoxDecoration(
+              color: Styles.standardColor,
+            ),
+            child: Image(image: AssetImage('assets/images/bhh_logo.png')),
+          ),
           _navItem(context, "Home"),
           _navItem(context, "Shopping card"),
           _navItem(context, "User"),
