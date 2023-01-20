@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 
 import '../models/product.dart';
 import '../styles/styles.dart';
+import '../handler/shopping_list_handler.dart';
 
 class ProductWidgetView extends StatelessWidget {
   final Product displayedProduct;
 
-  const ProductWidgetView(this.displayedProduct);
+  ProductWidgetView(this.displayedProduct, {super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,8 +1,11 @@
 import 'package:bhh_itech_shop_demo/models/product.dart';
+import 'package:bhh_itech_shop_demo/models/shopping_list_item.dart';
 
 import 'helper view/main_nav_drawer.dart';
+import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 import 'styles/styles.dart';
+import 'handler/shopping_list_handler.dart';
 
 class ProductDetailScreen extends StatefulWidget {
   final Product _product;
@@ -26,7 +29,8 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
       body: _detailViewBody(context),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          _addProductToShoppingListWithAmount();
+          _addProductToShoppingListWithAmount(
+              context, widget._product, _amountSel);
         },
         backgroundColor: Styles.standardColor,
         child: const Icon(
@@ -42,7 +46,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
       children: [
         _titleImage(),
         _titleText(),
-        _priceAmountClicker(),
+        _priceAmountClicker(context),
         _productDescription()
       ],
     );
@@ -74,7 +78,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
     );
   }
 
-  Widget _priceAmountClicker() {
+  Widget _priceAmountClicker(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: 15.0, right: 15.0, bottom: 10.0),
       child: Column(
@@ -93,7 +97,8 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  _addProductToShoppingListWithAmount();
+                  _addProductToShoppingListWithAmount(
+                      context, widget._product, _amountSel);
                 },
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Styles.standardColor,
@@ -169,7 +174,10 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
     );
   }
 
-  void _addProductToShoppingListWithAmount() {
-    print("Huiii");
+  void _addProductToShoppingListWithAmount(
+      BuildContext context, Product product, amount) {
+    var shoppingListHandler = context.read<ShoppingListHandler>();
+    shoppingListHandler
+        .addElement(ShoppingListItem(product: product, amount: amount));
   }
 }
