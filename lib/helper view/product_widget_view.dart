@@ -28,12 +28,12 @@ class ProductWidgetView extends StatelessWidget {
               fit: BoxFit.cover),
           borderRadius: BorderRadius.all(Radius.circular(25.0)),
           color: Colors.blueAccent),
-      child: Center(
+      /*child: Center(
         child: Text(
           displayedProduct.title,
           style: Styles.productWidgetTitleStyle,
         ),
-      ),
+      ),*/
     );
   }
 

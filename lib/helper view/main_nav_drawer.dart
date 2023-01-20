@@ -2,6 +2,7 @@ import 'package:bhh_itech_shop_demo/home_screen.dart';
 
 import '../shopping_card_view.dart';
 import 'package:flutter/material.dart';
+import '../styles/styles.dart';
 
 class MainNavDrawer extends StatelessWidget {
   @override
@@ -12,7 +13,7 @@ class MainNavDrawer extends StatelessWidget {
         children: [
           const DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.greenAccent,
+                color: Styles.standardColor,
               ),
               child: Text("ITECH-BHH Merch Shop")),
           _navItem(context, "Home"),
