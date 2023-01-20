@@ -34,7 +34,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
           color: Colors.white,
         ),
       ),
-    );dd
+    );
   }
 
   Widget _detailViewBody(BuildContext context) {
