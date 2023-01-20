@@ -8,7 +8,8 @@ class MockProducts {
           title: "T-Shirt schwarz",
           imageUrl: "imageUrl",
           price: "12.00€",
-          description: "Ein T-Shirt. Ist halt ein t-Shirt ne?"),
+          description:
+              "Kurzärmeliges Oberteil aus gestricktem oder gewirktem, elastischen, dehnbaren Gewebe ohne Kragen. Also ein T-Shirt. Ist halt ein T-Shirt ne?"),
       Product(
           id: 2,
           title: "test2",

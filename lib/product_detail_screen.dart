@@ -19,7 +19,10 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(widget._product.title)),
+      appBar: AppBar(
+        title: Text(widget._product.title),
+        backgroundColor: Styles.standardColor,
+      ),
       body: _detailViewBody(context),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
@@ -116,16 +119,20 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
               )
             ],
           ),
-          Row(
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 10.0),
-                child: Text(
-                  widget._product.description,
-                  style: Styles.productDescription,
+          Padding(
+            padding: const EdgeInsets.only(top: 10.0),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Text(
+                    widget._product.description,
+                    style: Styles.productDescription,
+                    softWrap: true,
+                    maxLines: 100,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ],
       ),
@@ -143,7 +150,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                 }
               });
             },
-            icon: const Icon(Icons.exposure_minus_1_rounded)),
+            icon: const Icon(Icons.remove_circle_outline)),
         Text(
           "$_amountSel",
           style: Styles.amountSelector,
@@ -154,7 +161,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                 _amountSel += 1;
               });
             },
-            icon: const Icon(Icons.exposure_plus_1_rounded))
+            icon: const Icon(Icons.add_circle_outline))
       ],
     );
   }
