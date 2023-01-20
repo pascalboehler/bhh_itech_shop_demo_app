@@ -86,18 +86,21 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
               _numPicker(),
             ],
           ),
-          SizedBox(
-            height: 45.0,
-            width: double.infinity,
-            child: ElevatedButton(
-              onPressed: () {
-                print("Adding to card");
-              },
-              style: ElevatedButton.styleFrom(
-                  backgroundColor: Styles.standardColor,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(25.0))),
-              child: Text("Add to card"),
+          Padding(
+            padding: EdgeInsets.only(top: 5.0),
+            child: SizedBox(
+              height: 45.0,
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: () {
+                  print("Adding to card");
+                },
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Styles.standardColor,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25.0))),
+                child: Text("Add to card"),
+              ),
             ),
           ),
         ],
