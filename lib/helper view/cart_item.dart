@@ -10,7 +10,17 @@ class CartItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-        context.read<ShoppingListHandler>().getList()[_index].product.title);
+    return Row(children: [_cartItemTitle(context), Spacer(), _cartItemTotalPrice(context)],);
+  }
+
+  Widget _cartItemTitle(BuildContext context) {
+    return Text(context.read<ShoppingListHandler>().getList()[_index].product.title);
+  }
+
+  Widget _cartItemTotalPrice(BuildContext context) {
+    
+    double price = context.read<ShoppingListHandler>().getList()[_index].product.price * context.read<ShoppingListHandler>().getList()[_index].amount;
+
+    return Text("$price €");
   }
 }
