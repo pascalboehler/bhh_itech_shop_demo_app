@@ -16,7 +16,7 @@ class ProductWidgetView extends StatelessWidget {
         onTap: () {
           showProductDetailView(context);
         },
-        child: Padding(padding: EdgeInsets.all(10), child: _buttonDesign()));
+        child: Padding(padding: const EdgeInsets.all(10), child: _buttonDesign()));
   }
 
   Widget _buttonDesign() {
