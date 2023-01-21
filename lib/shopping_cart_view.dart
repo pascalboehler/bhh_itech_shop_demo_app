@@ -1,5 +1,5 @@
 import 'package:bhh_itech_shop_demo/handler/shopping_list_handler.dart';
-import 'package:bhh_itech_shop_demo/helper%20view/cart_item.dart';
+import 'package:bhh_itech_shop_demo/helper%20view/cart_item_view.dart';
 
 import 'helper view/main_nav_drawer.dart';
 import 'package:provider/provider.dart';
@@ -17,7 +17,7 @@ class ShoppingCartView extends StatelessWidget {
       body: ListView.builder(
           itemCount: context.read<ShoppingListHandler>().getList().length,
           itemBuilder: (context, index) {
-            return CartItem(index);
+            return CartItemView(index);
           }),
       drawer: MainNavDrawer(),
     );

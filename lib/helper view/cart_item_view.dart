@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../handler/shopping_list_handler.dart';
 
-class CartItem extends StatelessWidget {
+class CartItemView extends StatelessWidget {
   int _index;
 
-  CartItem(this._index);
+  CartItemView(this._index);
 
   @override
   Widget build(BuildContext context) {
