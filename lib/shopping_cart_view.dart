@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 import 'styles/styles.dart';
 
-class ShoppingCardView extends StatelessWidget {
+class ShoppingCartView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

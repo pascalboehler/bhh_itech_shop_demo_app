@@ -1,6 +1,6 @@
 import 'package:bhh_itech_shop_demo/home_screen.dart';
 
-import '../shopping_card_view.dart';
+import '../shopping_cart_view.dart';
 import 'package:flutter/material.dart';
 import '../styles/styles.dart';
 
@@ -50,7 +50,7 @@ class MainNavDrawer extends StatelessWidget {
         {
           print("$title was selected");
           Navigator.of(context).push(MaterialPageRoute(
-              builder: (BuildContext context) => ShoppingCardView()));
+              builder: (BuildContext context) => ShoppingCartView()));
         }
         break;
       case "User":
