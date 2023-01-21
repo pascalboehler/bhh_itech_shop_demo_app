@@ -16,7 +16,8 @@ class ProductWidgetView extends StatelessWidget {
         onTap: () {
           showProductDetailView(context);
         },
-        child: Padding(padding: const EdgeInsets.all(10), child: _buttonDesign()));
+        child:
+            Padding(padding: const EdgeInsets.all(10), child: _buttonDesign()));
   }
 
   Widget _buttonDesign() {
@@ -25,8 +26,7 @@ class ProductWidgetView extends StatelessWidget {
       height: 200,
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: displayedProduct.imageProv,
-              fit: BoxFit.cover),
+              image: displayedProduct.imageProv, fit: BoxFit.cover),
           borderRadius: const BorderRadius.all(Radius.circular(25.0)),
           color: Colors.blueAccent),
       /*child: Center(

@@ -1,4 +1,5 @@
 import 'package:bhh_itech_shop_demo/handler/shopping_list_handler.dart';
+import 'package:bhh_itech_shop_demo/helper%20view/cart_item.dart';
 
 import 'helper view/main_nav_drawer.dart';
 import 'package:provider/provider.dart';
@@ -10,17 +11,13 @@ class ShoppingCartView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Shopping card"),
+        title: const Text("Shopping cart"),
         backgroundColor: Styles.standardColor,
       ),
       body: ListView.builder(
           itemCount: context.read<ShoppingListHandler>().getList().length,
           itemBuilder: (context, index) {
-            return Text(context
-                .read<ShoppingListHandler>()
-                .getList()[index]
-                .product
-                .title);
+            return CartItem(index);
           }),
       drawer: MainNavDrawer(),
     );
