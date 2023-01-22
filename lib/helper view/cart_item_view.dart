@@ -17,12 +17,19 @@ class CartItemView extends StatelessWidget {
           color: Colors.blueGrey),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Row(
+        child: Column(
           children: [
-            _deleteButton(context),
-            _cartItemTitle(context),
-            const Spacer(),
-            _cartItemTotalPrice(context)
+            Row(
+              // very top "orga" row
+              children: [
+                _deleteButton(context),
+                _cartItemImage(context),
+                Spacer(),
+                _cartItemTitle(context),
+                Spacer(),
+                _cartItemTotalPrice(context)
+              ],
+            ),
           ],
         ),
       ),
@@ -33,6 +40,21 @@ class CartItemView extends StatelessWidget {
     return Text(
       context.read<ShoppingListHandler>().getList()[_index].product.title,
       style: Styles.productTitle,
+    );
+  }
+
+  Widget _cartItemImage(BuildContext context) {
+    return Container(
+      height: (100 / 3 * 2),
+      width: 100,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+            image: context
+                .read<ShoppingListHandler>()
+                .getList()[_index]
+                .product
+                .imageProv),
+      ),
     );
   }
 

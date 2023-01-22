@@ -44,18 +44,24 @@ class ShoppingCartView extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text("It's so empty here:(", style: TextStyle(fontSize: 35.0),),
+          const Text(
+            "It's so empty here:(",
+            style: TextStyle(fontSize: 35.0),
+          ),
           const Icon(
             Icons.shopping_bag_outlined,
             size: 400.0,
             color: Styles.standardColor,
           ),
-          
-          TextButton(onPressed: () {
-            Navigator.of(context).push(MaterialPageRoute(
-              builder: (BuildContext context) => HomeScreen()));
-          }, 
-          child: const Text("Go to home", style: TextStyle(fontSize: 35.0),))
+          TextButton(
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (BuildContext context) => HomeScreen()));
+              },
+              child: const Text(
+                "Go to home",
+                style: TextStyle(fontSize: 35.0),
+              ))
         ],
       ),
     );
