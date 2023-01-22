@@ -9,16 +9,21 @@ import 'styles/styles.dart';
 class ShoppingCartView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var shoppingListHandler = context.watch<ShoppingListHandler>();
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("Shopping cart"),
         backgroundColor: Styles.standardColor,
       ),
-      body: ListView.builder(
-          itemCount: context.read<ShoppingListHandler>().getList().length,
-          itemBuilder: (context, index) {
-            return CartItemView(index);
-          }),
+      body: Padding(
+        padding: const EdgeInsets.only(top: 10.0, left: 4.0, right: 4.0),
+        child: ListView.builder(
+            itemCount: shoppingListHandler.getList().length,
+            itemBuilder: (context, index) {
+              return CartItemView(index);
+            }),
+      ),
       drawer: MainNavDrawer(),
     );
   }

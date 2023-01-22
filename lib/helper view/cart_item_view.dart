@@ -11,12 +11,21 @@ class CartItemView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        _cartItemTitle(context),
-        Spacer(),
-        _cartItemTotalPrice(context)
-      ],
+    return Container(
+      decoration: const BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(20.0)),
+          color: Colors.blueGrey),
+      child: Padding(
+        padding: EdgeInsets.all(8.0),
+        child: Row(
+          children: [
+            _deleteButton(context),
+            _cartItemTitle(context),
+            Spacer(),
+            _cartItemTotalPrice(context)
+          ],
+        ),
+      ),
     );
   }
 
@@ -36,5 +45,14 @@ class CartItemView extends StatelessWidget {
       "$price €",
       style: Styles.productPrice,
     );
+  }
+
+  Widget _deleteButton(BuildContext context) {
+    return IconButton(
+        onPressed: () {
+          print("Item will be deleted now");
+          context.read<ShoppingListHandler>().deleteItemAt(_index);
+        },
+        icon: const Icon(Icons.clear));
   }
 }

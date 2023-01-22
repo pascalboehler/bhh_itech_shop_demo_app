@@ -10,6 +10,12 @@ class ShoppingListHandler extends ChangeNotifier {
     notifyListeners();
   }
 
+  void deleteItemAt(int index) {
+    _shoppingList.removeAt(index);
+
+    notifyListeners();
+  }
+
   List<ShoppingListItem> getList() {
     return _shoppingList;
   }
