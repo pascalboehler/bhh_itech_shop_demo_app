@@ -16,12 +16,12 @@ class CartItemView extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(20.0)),
           color: Colors.blueGrey),
       child: Padding(
-        padding: EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(8.0),
         child: Row(
           children: [
             _deleteButton(context),
             _cartItemTitle(context),
-            Spacer(),
+            const Spacer(),
             _cartItemTotalPrice(context)
           ],
         ),
