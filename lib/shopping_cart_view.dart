@@ -22,6 +22,9 @@ class ShoppingCartView extends StatelessWidget {
           ? _bodyNotEmpty(context)
           : _bodyEmpty(context),
       drawer: MainNavDrawer(),
+      floatingActionButton: shoppingListHandlerLength == 0 ? null :  FloatingActionButton(onPressed: () {
+        print("Proceed to checkout");
+      }, child: Icon(Icons.shopping_cart_checkout),),
     );
   }
 

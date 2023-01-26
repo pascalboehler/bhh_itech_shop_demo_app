@@ -40,6 +40,7 @@ class CartItemView extends StatelessWidget {
     return Text(
       context.read<ShoppingListHandler>().getList()[_index].product.title,
       style: Styles.productTitle,
+      softWrap: true
     );
   }
 
