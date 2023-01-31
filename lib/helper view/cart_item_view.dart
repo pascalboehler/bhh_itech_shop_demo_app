@@ -1,3 +1,4 @@
+import 'package:bhh_itech_shop_demo/handler/data_handler.dart';
 import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
@@ -38,7 +39,7 @@ class CartItemView extends StatelessWidget {
 
   Widget _cartItemTitle(BuildContext context) {
     return Text(
-        context.read<ShoppingListHandler>().getList()[_index].product.title,
+        context.read<DataHandler>().shoppingListHandler.getList()[_index].product.title,
         style: Styles.productTitle,
         softWrap: true);
   }
@@ -50,7 +51,7 @@ class CartItemView extends StatelessWidget {
       decoration: BoxDecoration(
         image: DecorationImage(
             image: context
-                .read<ShoppingListHandler>()
+                .read<DataHandler>().shoppingListHandler
                 .getList()[_index]
                 .product
                 .imageProv),
@@ -60,8 +61,8 @@ class CartItemView extends StatelessWidget {
 
   Widget _cartItemTotalPrice(BuildContext context) {
     double price =
-        context.read<ShoppingListHandler>().getList()[_index].product.price *
-            context.read<ShoppingListHandler>().getList()[_index].amount;
+        context.read<DataHandler>().shoppingListHandler.getList()[_index].product.price *
+            context.read<DataHandler>().shoppingListHandler.getList()[_index].amount;
 
     return Text(
       "$price €",
@@ -73,7 +74,7 @@ class CartItemView extends StatelessWidget {
     return IconButton(
         onPressed: () {
           print("Item will be deleted now");
-          context.read<ShoppingListHandler>().deleteItemAt(_index);
+          context.read<DataHandler>().shoppingListHandler.deleteItemAt(_index);
         },
         icon: const Icon(Icons.clear));
   }

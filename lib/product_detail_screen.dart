@@ -1,3 +1,4 @@
+import 'package:bhh_itech_shop_demo/handler/data_handler.dart';
 import 'package:bhh_itech_shop_demo/models/product.dart';
 import 'package:bhh_itech_shop_demo/models/shopping_list_item.dart';
 
@@ -175,7 +176,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
 
   void _addProductToShoppingListWithAmount(
       BuildContext context, Product product, amount) {
-    var shoppingListHandler = context.read<ShoppingListHandler>();
+    var shoppingListHandler = context.read<DataHandler>().shoppingListHandler;
     shoppingListHandler
         .addElement(ShoppingListItem(product: product, amount: amount));
   }

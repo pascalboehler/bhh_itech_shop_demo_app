@@ -1,3 +1,4 @@
+import 'package:bhh_itech_shop_demo/handler/data_handler.dart';
 import 'package:bhh_itech_shop_demo/handler/shopping_list_handler.dart';
 import 'package:bhh_itech_shop_demo/helper%20view/cart_item_view.dart';
 
@@ -11,7 +12,7 @@ class ShoppingCartView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var shoppingListHandlerLength =
-        context.watch<ShoppingListHandler>().getList().length;
+        context.watch<DataHandler>().shoppingListHandler.getList().length;
 
     return Scaffold(
       appBar: AppBar(
@@ -34,7 +35,7 @@ class ShoppingCartView extends StatelessWidget {
   }
 
   Widget _bodyNotEmpty(BuildContext context) {
-    var shoppingListHandler = context.watch<ShoppingListHandler>();
+    var shoppingListHandler = context.watch<DataHandler>().shoppingListHandler;
 
     return Padding(
       padding: const EdgeInsets.only(top: 10.0, left: 4.0, right: 4.0),
