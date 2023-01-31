@@ -61,7 +61,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
         decoration: BoxDecoration(
             borderRadius: const BorderRadius.all(Radius.circular(10.0)),
             image: DecorationImage(
-                image: widget._product.imageProv, fit: BoxFit.cover)),
+                image: widget._product.imageProv, fit: BoxFit.fitHeight)),
       ),
     );
   }
@@ -84,7 +84,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
         children: [
           Row(
             children: [
-              Text("${widget._product.price * _amountSel} €", style: Styles.productPrice),
+              Text("${(widget._product.price * _amountSel).toStringAsFixed(2)} €", style: Styles.productPrice),
               Spacer(),
               _numPicker(),
             ],

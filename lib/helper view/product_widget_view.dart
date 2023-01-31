@@ -26,9 +26,9 @@ class ProductWidgetView extends StatelessWidget {
       height: 200,
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: displayedProduct.imageProv, fit: BoxFit.cover),
+              image: displayedProduct.imageProv, fit: BoxFit.fitHeight),
           borderRadius: const BorderRadius.all(Radius.circular(25.0)),
-          color: Colors.blueAccent),
+          color: Colors.white),
       /*child: Center(
         child: Text(
           displayedProduct.title,
