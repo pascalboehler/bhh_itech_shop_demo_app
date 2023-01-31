@@ -84,7 +84,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
         children: [
           Row(
             children: [
-              Text("${widget._product.price} €", style: Styles.productPrice),
+              Text("${widget._product.price * _amountSel} €", style: Styles.productPrice),
               Spacer(),
               _numPicker(),
             ],
