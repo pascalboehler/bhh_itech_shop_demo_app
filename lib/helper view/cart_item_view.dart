@@ -38,10 +38,9 @@ class CartItemView extends StatelessWidget {
 
   Widget _cartItemTitle(BuildContext context) {
     return Text(
-      context.read<ShoppingListHandler>().getList()[_index].product.title,
-      style: Styles.productTitle,
-      softWrap: true
-    );
+        context.read<ShoppingListHandler>().getList()[_index].product.title,
+        style: Styles.productTitle,
+        softWrap: true);
   }
 
   Widget _cartItemImage(BuildContext context) {
