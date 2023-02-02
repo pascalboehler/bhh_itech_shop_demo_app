@@ -29,6 +29,7 @@ class ShoppingCartView extends StatelessWidget {
                 print("Proceed to checkout");
               },
               child: Icon(Icons.shopping_cart_checkout),
+              backgroundColor: Styles.standardColor,
             ),
     );
   }

@@ -14,7 +14,7 @@ class MainNavDrawer extends StatelessWidget {
         children: [
           const DrawerHeader(
             decoration: BoxDecoration(
-              color: Colors.black,
+              color: Colors.white,
             ),
             child: Image(image: AssetImage('assets/logos/logo.png')),
           ),

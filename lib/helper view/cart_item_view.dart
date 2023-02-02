@@ -14,7 +14,7 @@ class CartItemView extends StatelessWidget {
     return Container(
       decoration: const BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(20.0)),
-          color: Colors.blueGrey),
+          color: Styles.standardColor),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
