@@ -16,7 +16,7 @@ class MainNavDrawer extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.black,
             ),
-            child: Image(image: AssetImage('assets/logos/bhh_logo.png')),
+            child: Image(image: AssetImage('assets/logos/logo.png')),
           ),
           _navItem(context, "Home"),
           _navItem(context, "Shopping card"),
@@ -57,7 +57,8 @@ class MainNavDrawer extends StatelessWidget {
       case "User":
         {
           print("$title was selected");
-          Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => UserLoginScreen()));
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (BuildContext context) => UserLoginScreen()));
         }
         break;
       case "About":

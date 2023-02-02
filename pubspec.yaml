@@ -50,7 +50,7 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   flutter_launcher_icons:
 
-# For information on the generic Dart part of this file, see the
+# For information onNur ist die Instanz nicht richtig public.  the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
 flutter_icons:
@@ -80,6 +80,7 @@ flutter:
     - assets/images/black.jpg
     - assets/images/dark_green.jpg
     - assets/images/white.jpg
+    - assets/logos/logo.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
